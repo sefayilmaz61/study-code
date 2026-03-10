@@ -35,55 +35,35 @@ g++ helloWorld.cpp -o helloWorld
 * Feel free to repeat this process on your local machine to ensure a correct setup there too
 * If you struggle with these steps or wonder how to get running on your private, local machine, you can follow the lab1 of the C course which can be found [in this same repo](https://github.com/christian-braunagel/study-code/tree/main/courses/coding-in-C/Lab_1)
 
-## Section II
+## 🟢 Section II: Age Validation
 
-Create a flow chart for the programm developed in Section I.
-You can use [draw.io](https://www.drawio.com/) as a free tool to create the flow chart.
-
-## Section III: Chessboard with Border and Alternating Fields
+The goal of this section is to get to know some new features of the C++ language including bool, namespaces, input/output via streams.
 
 ### Task Description
-
-Extend the program from **Section I** so that the chessboard is printed as a **graphical board with borders**, labels, and a **correctly alternating field pattern**, similar to a real chessboard.
-
-Instead of printing only the coordinates, your program shall visualize the board using ASCII characters.
-
-The output must include:
-
-- a surrounding grid made of `+`, `-`, and `|`
-- file labels (`A` to `H`) printed **above and below** the board
-- rank labels (`8` to `1`) printed **on the left and right** of each row
-- a visual representation of the fields using characters (e.g. `###` for dark squares and spaces for light squares)
-- a **checkerboard pattern**, where field colors alternate:
-  - horizontally within a row
-  - vertically from one row to the next
-
-A schematic example of the intended structure:
-
-![Image of final output for Section III](https://github.com/christian-braunagel/study-code/blob/main/courses/coding-in-C/Lab_2/schematicOutput.png)
-
-
-(The exact characters and spacing must match your implementation.)
+Your task is to implement a software that receives the age of an user via keyboard and determines if the user is akid/teenager, an adult or a senior.
 
 ### Requirements
 
-Your program must:
+* Create a namespace called __validation__
+* Inside it, implement two functions:
+```c
+bool isAdult(___ age)
+```
+* The function should return:
+   * true if age is 18 or older
+   * false otherwise
+```c
+bool isSenior(___ age);
+```
+* The function should return:
+   * true if age is 65 or older
+   * false otherwise
 
-- not hard-code any rows, columns, or fields
-- print rank numbers on **both the left and right side** of the board
-- print file letters **above and below** the board
-- visually distinguish light and dark squares
-- ensure that the field pattern alternates correctly
-- use constants (e.g. board size) where appropriate
+* As datatype for the parameters, you should use a portable type from \<cstdint>.
+* Output of the main program should look like this:
+Question: Which data types could be used? Implement it with using and without using
 
-The purpose of this task is to practice:
-
-- nested loop logic
-- conditional statements
-- formatted output with `printf`
-- translating a conceptual model (chessboard) into structured program output
-
-### Hint (Optional)
+### Hint
 
 Think about how the **row index and column index together** can be used to decide whether a field is light or dark.
 
