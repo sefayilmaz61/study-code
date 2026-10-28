@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <string>
 #include <vector>
-#include < algorithm>
+#include <algorithm>
 #include "Driver.hpp"
 #include "Vehicle.hpp"
 
